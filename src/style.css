@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+body {
+    font: 14px "Nunito", Futura, sans-serif;
+    background-color: rgba(87, 90, 109,0.80);
+    -webkit-font-smoothing: antialiased;
+  }
+  .window-box {
+    position: relative;
+    margin: auto;
+    top: 80px;
+    width: 80%;
+    max-width: 915px;
+    height: 700px;
+    text-align: left;
+    background-color: rgb(235, 235, 236);;
+    border-radius: 10px;
+    padding: 15px 45px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+/* GENERALIZED CLASS ATTRIBUTES */  
+
+.dialog button {
+  transition: all 0.275s;
+}
+.dialog button:hover {
+  cursor: pointer;
+}
+
+/* PLAYLIST HEADER BELOW */
+  .header-container {
+    border-bottom: 1px solid #ccc;
+  }
+  .header-buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    
+  }
+  .playlist-exit-buttons {
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 900; 
+    border-radius: 50%;
+    color: #aaa;
+    min-width: unset;
+    border: none;
+    outline: none;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .playlist-exit-buttons:hover{
+    background-color: #777;
+    color: white;
+  }
+  .playlist-header-info {
+    display: flex;
+    padding-bottom: 30px;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  .playlist-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px 0 0;
+    width: 200px;
+    height: 200px;
+    border: #777;
+    background-color: rgb(174, 202, 213);
+    border-radius: 8px;
+    color: white;
+    font-size: 100px;
+    
+  }
+  .playlist-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 500px;
+  }
+  .playlist-type {
+    padding-top: 45px;
+    font-size: 12px;
+    font-weight: 900;
+    color: #2F9AEF;
+
+  }
+  .playlist-title {
+    font-family: Nunito;
+    font-size: 48px;
+    font-weight: bold;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+  }
+  .user-description {
+    font-size: 13px;
+    color: #888;
+  }
+  .sort-count-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin: 0px;
+    line-height: 2em;
+    color: #999;
+    font-weight: bold;
+  }
+  .sort-count-row .expand-button {
+    padding: 0px;
+    text-decoration: normal;
+  }
+  .sort-menu:hover {
+    text-decoration: underline;
+  }
+
+/* PROJECT LIST BELOW */
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    white-space: nowrap;
+    padding: 0px 10px;
+    border-radius: 2px;
+    height: auto; /* was 55vh */
+    overflow-y: visible; /* could also make it visible */
+    list-style: none
+  }
+  .project-item {
+    position: relative;
+    margin-bottom: 1.5em;
+  }
+  .project-summary {
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 3px;
+    transition: 0.25s all;
+  }
+  .project-summary:hover {
+    background-color: rgb(220, 220, 220);;
+  }
+  .project-icon {
+    border: #ee8f4a;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    margin-right: 18px;
+    text-align: center;
+    background-image: url(https://tunepad.com/assets/images/project_art.svg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .project-name {
+    font-family: "Nunito", Futura, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #888;
+    flex: 1;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+  }
+  .project-name:hover {
+    text-decoration: underline;
+  }
+  .project-item .sort-criteria {
+    font-size: 12px;
+    color: #777;;
+    flex: 1;
+    margin-right: 0.8em;
+    width: 5em;
+    text-align: right;
+    white-space: nowrap;
+  }
+  .expand-button {
+    background-color: transparent;
+    height: 32px;
+    color: #888;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    margin: 0 0.3em;
+    padding: 0px 16px;
+    cursor: pointer;
+  }
+  .expand-button:hover {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .project-details {
+    padding: 10px 5px;
+    background-color: rgb(70, 85, 114, 0.075);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    color: #333;
+    font-size: 16px;
+    text-align: left;
+    line-height: 120%;
+  }
+  .left-column {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10px;
+  }
+  .right-column {
+    padding-top: 10px;
+    flex: 1;
+    padding-left: 15px;
+    max-width: 100%;
+  }
+  .project-details .name {
+    margin: 0px;
+    font-size: 1.2em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 98%;
+  }
+  .project-details .author {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: normal;
+    max-width: 185px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .project-details .created {
+    line-height: 120%;
+    font-size: 0.8em;
+    font-weight: normal;
+  }
+  .project-details .project-icon {
+    background-color: rgb(252, 62, 116);
+    width: 125px;
+    height: 125px;
+    background-repeat: no-repeat;
+    margin: 0px;
+  }
+  .project-details .music-info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-top: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(52, 68, 88, 0.5);
+
+
+  }
+  .project-toolbar-container {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+  }
+  .project-toolbar {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0.8em;
+    color: #333;
+    height: auto;
+    width: 6em;
+    margin: 1px;
+    background-color: #ccc;
+    transition: all 0.25s;
+    border: 1px solid #ebebec;
+    border-radius: 24px;
+    transition: 0.5s;
+  }
+  .project-toolbar:hover {
+    background-color: rgb(184, 184, 184);
+    box-shadow: 0px 6px 5px -3px rgba(0, 0, 0, 0.2);
+  }
+  .project-details-hidden {
+    display: none;
+  }
+
+
+  /* FOOTER */
+
+  .playlist-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    align-items: flex-end;
+    position: relative;
+  }
+  .new-playlist-button {
+    background-color: #279DDB;
+    color: white;
+    border-radius: 25px;
+    width: 130px;
+    height: 40px;
+    border: none;
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
